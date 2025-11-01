@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int__sales_enriched
+    description: "Table enrichie combinant ventes, produits, clients et magasins."
+    columns:
+      - name: order_id
+        tests: [not_null]

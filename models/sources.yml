@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: localbike
+    description: "Raw Local Bike data in BigQuery"
+    schema: localbike
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: stores
+      - name: customers
+      - name: categories
+      - name: brands
+      - name: staffs
+      - name: stocks

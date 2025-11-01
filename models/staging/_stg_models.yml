@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg__orders
+    description: "Commandes nettoyées, base des ventes."
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: order_date
+        tests: [not_null]
