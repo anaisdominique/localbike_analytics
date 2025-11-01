@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: mart__local_performance
+    description: "Performance mensuelle des magasins."
+  - name: mart__local_product_mix
+    description: "Mix produit par magasin et catégorie."
