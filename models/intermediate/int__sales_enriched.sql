@@ -23,10 +23,10 @@ WITH joined AS (
     i.line_revenue_net
   FROM {{ ref('stg__orders') }} AS o
   JOIN {{ ref('stg__order_items') }} AS i ON o.order_id = i.order_id
-  JOIN {{ ref('stg__products') }} AS p ON i.product_id = p.product_id
+  LEFT JOIN {{ ref('stg__products') }} AS p ON i.product_id = p.product_id
   LEFT JOIN {{ ref('stg__categories') }} AS cat ON p.category_id = cat.category_id
   LEFT JOIN {{ ref('stg__brands') }} AS b ON p.brand_id = b.brand_id
-  JOIN {{ ref('stg__stores') }} AS s ON o.store_id = s.store_id
+  LEFT JOIN {{ ref('stg__stores') }} AS s ON o.store_id = s.store_id
   LEFT JOIN {{ ref('stg__customers') }} AS c ON o.customer_id = c.customer_id
 )
 SELECT *
